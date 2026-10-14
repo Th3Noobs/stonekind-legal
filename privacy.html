@@ -7,40 +7,59 @@
 <meta name="description" content="Informativa sulla privacy di Stonekind / Stonekind privacy policy.">
 <meta name="color-scheme" content="light dark">
 <style>
-:root{--bg:#faf7f2;--surface:#ffffff;--text:#2b2620;--muted:#6b6259;--accent:#8a5a2b;--border:#e4dccf;--code:#f1ece3}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1c1915;--surface:#26221d;--text:#ece5da;--muted:#b3a899;--accent:#e0a868;--border:#3a342c;--code:#302a23}}
-:root[data-theme="dark"]{--bg:#1c1915;--surface:#26221d;--text:#ece5da;--muted:#b3a899;--accent:#e0a868;--border:#3a342c;--code:#302a23}
+:root{--bg:#f4f1ea;--surface:#fffdf9;--text:#262320;--muted:#6a6358;--accent:#2f6f56;--accent-2:#c27a1f;--border:#e2dccf;--code:#efeadf;--hero-a:#2b2a26;--hero-b:#3d4a3f;--shadow:0 1px 2px rgba(40,30,10,.06),0 8px 24px -12px rgba(40,30,10,.18)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#171612;--surface:#211f1a;--text:#ebe6dc;--muted:#aca493;--accent:#6fc29a;--accent-2:#e8b05a;--border:#38342b;--code:#2b2822;--hero-a:#1f1e1a;--hero-b:#2c3a31;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6)}}
+:root[data-theme="dark"]{--bg:#171612;--surface:#211f1a;--text:#ebe6dc;--muted:#aca493;--accent:#6fc29a;--accent-2:#e8b05a;--border:#38342b;--code:#2b2822;--hero-a:#1f1e1a;--hero-b:#2c3a31;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6)}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{background:var(--surface);border-bottom:1px solid var(--border)}
-.bar{max-width:820px;margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between}
-.brand{font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none;letter-spacing:.02em}
-nav{display:flex;flex-wrap:wrap;gap:6px 16px}
-nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
-nav a[aria-current="page"],nav a:hover{color:var(--accent)}
-main{max-width:820px;margin:0 auto;padding:16px 16px 48px}
-.lang{display:flex;gap:8px;margin:8px 0 24px}
-.lang a{border:1px solid var(--border);border-radius:999px;padding:4px 14px;color:var(--text);text-decoration:none;font-size:.9rem;background:var(--surface)}
-.lang a:hover{border-color:var(--accent)}
-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:8px 20px 20px;margin-bottom:28px}
-h1{font-size:1.6rem;line-height:1.25;margin:16px 0 8px}
-h2{font-size:1.2rem;margin:28px 0 8px;padding-top:8px;border-top:1px solid var(--border)}
-h3{font-size:1.05rem;margin:20px 0 6px}
-a{color:var(--accent);overflow-wrap:anywhere}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(120deg,var(--hero-a),var(--hero-b));border-bottom:3px solid var(--accent-2);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.bar{max-width:860px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;color:#f6efe0;text-decoration:none;letter-spacing:.06em;text-transform:uppercase}
+.brand::before{content:"";width:22px;height:22px;background:var(--accent-2);clip-path:polygon(50% 0,100% 28%,86% 100%,14% 100%,0 28%);flex:none}
+nav{display:flex;flex-wrap:wrap;gap:4px 6px}
+nav a{color:#d8d0bf;text-decoration:none;font-size:.93rem;padding:5px 12px;border-radius:999px;transition:background .15s,color .15s}
+nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav a[aria-current="page"]{background:var(--accent-2);color:#241a08;font-weight:600}
+main{max-width:860px;margin:0 auto;padding:20px 16px 56px}
+.lang{display:flex;gap:8px;margin:4px 0 22px}
+.lang a{border:1px solid var(--border);border-radius:999px;padding:5px 16px;color:var(--text);text-decoration:none;font-size:.9rem;background:var(--surface);transition:all .15s}
+.lang a:hover{border-color:var(--accent);color:var(--accent)}
+section{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:10px 28px 26px;margin-bottom:32px;box-shadow:var(--shadow)}
+h1{font-size:1.75rem;line-height:1.25;margin:20px 0 10px;letter-spacing:-.01em}
+h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--accent-2);margin-top:10px}
+h2{font-size:1.2rem;margin:32px 0 10px;padding:10px 0 0;border-top:1px solid var(--border);color:var(--accent)}
+h3{font-size:1.04rem;margin:22px 0 6px}
+a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{color:var(--accent-2)}
 p,li{overflow-wrap:break-word}
-.table-wrap{overflow-x:auto;margin:12px 0}
-table{border-collapse:collapse;width:100%;font-size:.93rem}
-th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
-th{background:var(--code)}
-blockquote{margin:12px 0;padding:4px 16px;border-left:3px solid var(--accent);color:var(--text);background:var(--code);border-radius:0 8px 8px 0}
+li{margin:3px 0}
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border-bottom:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{background:var(--code);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--code) 45%,transparent)}
+blockquote{margin:14px 0;padding:6px 18px;border-left:4px solid var(--accent-2);background:var(--code);border-radius:0 10px 10px 0}
 code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem;background:var(--code);border-radius:6px}
-code{padding:1px 5px}
+code{padding:1px 6px}
 pre{padding:12px;overflow-x:auto;white-space:pre}
 pre code{padding:0;background:none}
 em{color:var(--muted)}
-footer{max-width:820px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font-size:.85rem}
-@media (max-width:480px){body{font-size:15px}section{padding:4px 14px 16px}h1{font-size:1.35rem}}
+strong{font-weight:650}
+.hero{border-radius:16px;padding:30px 28px;margin:4px 0 26px;color:#f6efe0;background:linear-gradient(135deg,var(--hero-a),var(--hero-b));box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;background:var(--accent-2);opacity:.15;clip-path:polygon(50% 0,100% 28%,86% 100%,14% 100%,0 28%)}
+.hero h1{margin:0 0 8px;font-size:1.9rem;color:#fff}
+.hero p{margin:0;max-width:60ch;color:#e3dccb}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:3px 12px;font-size:.85rem;color:#f6efe0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{display:block;padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text);text-decoration:none;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--text)}
+.card b{display:block;color:var(--accent);margin-bottom:2px}
+.card span{font-size:.9rem;color:var(--muted)}
+footer{max-width:860px;margin:0 auto;padding:0 16px 36px;color:var(--muted);font-size:.85rem;text-align:center}
+@media (max-width:520px){body{font-size:15px}section{padding:4px 16px 20px}h1{font-size:1.4rem}.hero{padding:22px 18px}.hero h1{font-size:1.5rem}}
 </style>
 </head>
 <body>
@@ -57,7 +76,7 @@ modificato dal D.lgs. 101/2018) e, per gli utenti negli Stati Uniti, delle leggi
 privacy dei consumatori (per esempio il California Consumer Privacy Act come modificato dal CPRA).</p>
 <h2>1. Chi è il titolare del trattamento</h2>
 <p><strong>BiteForge</strong>, sviluppatore individuale, Pescara, Italia
-Email: <strong>francescoscurti1@gmail.com</strong></p>
+Email: <strong>stonekind.game@gmail.com</strong></p>
 <p>Non è stato nominato un Responsabile della protezione dei dati (DPO): non è obbligatorio per
 questo tipo di attività. Per qualsiasi domanda sulla privacy scrivi all'email qui sopra.</p>
 <h2>2. In breve</h2>
@@ -246,7 +265,7 @@ account né server propri, non può collegare un ID pubblicità a una persona. P
 <li>per <strong>revocare o modificare il consenso</strong> usa il gioco (sezione 10);</li>
 <li>per i dati trattati da Google puoi usare gli strumenti di Google (<a href="https://myaccount.google.com/" rel="noopener">Il mio account Google</a>,
   <a href="https://myadcenter.google.com/" rel="noopener">Il mio centro annunci</a>) o <a href="https://support.google.com/policies/contact/general_privacy_form" rel="noopener">contattare Google</a>;</li>
-<li>per tutto il resto scrivi a <strong>francescoscurti1@gmail.com</strong>: rispondiamo entro <strong>un mese</strong> (prorogabile di
+<li>per tutto il resto scrivi a <strong>stonekind.game@gmail.com</strong>: rispondiamo entro <strong>un mese</strong> (prorogabile di
   due mesi nei casi complessi, come previsto dall'art. 12 GDPR).</li>
 </ul>
 <p>Hai inoltre il diritto di <strong>proporre reclamo al Garante per la protezione dei dati personali</strong>
@@ -281,7 +300,7 @@ comportamentale tra app diverse può essere qualificato come "vendita" o "condiv
   condividere i tuoi dati; la scelta si può modificare in <strong>Impostazioni → "Privacy e pubblicità"</strong>.
   Puoi anche eliminare l'ID pubblicità nelle impostazioni di Android.</li>
 <li><strong>Altri diritti</strong> (sapere, accedere, cancellare, correggere, limitare): scrivi a
-  francescoscurti1@gmail.com. Non ti discrimineremo per aver esercitato i tuoi diritti. Possiamo chiederti
+  stonekind.game@gmail.com. Non ti discrimineremo per aver esercitato i tuoi diritti. Possiamo chiederti
   informazioni ragionevoli per verificare la richiesta; puoi farti rappresentare da un agente
   autorizzato.</li>
 <li>I <strong>segnali Global Privacy Control</strong> si applicano ai browser; in un'app Android il meccanismo
@@ -294,7 +313,7 @@ famiglie" di Google Play. Lo sviluppatore non raccoglie consapevolmente dati di 
 online (art. 8 GDPR); in Italia l'età è <strong>14 anni</strong> (art. 2-quinquies Codice privacy). Se hai meno
 dell'età del consenso digitale del tuo paese, <strong>non accettare gli annunci personalizzati</strong> nel modulo
 di consenso e chiedi a un genitore o tutore. Se sei un genitore e ritieni che un minore ci abbia
-inviato dati personali, scrivi a francescoscurti1@gmail.com e li cancelleremo.</p>
+inviato dati personali, scrivi a stonekind.game@gmail.com e li cancelleremo.</p>
 <p>Negli Stati Uniti il gioco non è diretto ai minori di 13 anni ai sensi del COPPA.</p>
 <h2>13. Sicurezza</h2>
 <p>Le comunicazioni tra l'SDK di Google e i server di Google sono <strong>cifrate in transito</strong> (TLS). I
@@ -305,7 +324,7 @@ versione sarà pubblicata a questo indirizzo con una nuova data di aggiornamento
 rilevanti lo segnaleremo anche nelle note di aggiornamento su Google Play e, se necessario, ti
 chiederemo di nuovo il consenso.</p>
 <h2>15. Contatti</h2>
-<p>BiteForge — francescoscurti1@gmail.com — Pescara, Italia</p>
+<p>BiteForge — stonekind.game@gmail.com — Pescara, Italia</p>
 </section>
 <section id="en" lang="en">
 <h1>Stonekind Privacy Policy</h1>
@@ -318,7 +337,7 @@ in the United States, state consumer privacy laws (for example the California Co
 as amended by the CPRA).</p>
 <h2>1. Who is the data controller</h2>
 <p><strong>BiteForge</strong>, independent developer, Pescara, Italy
-Email: <strong>francescoscurti1@gmail.com</strong></p>
+Email: <strong>stonekind.game@gmail.com</strong></p>
 <p>No Data Protection Officer has been appointed, as none is required for this kind of activity. For
 any privacy question, write to the email above.</p>
 <h2>2. At a glance</h2>
@@ -499,7 +518,7 @@ servers, it cannot link an advertising ID to a person. Therefore:</p>
 <li>to <strong>withdraw or change consent</strong>, use the game (section 10);</li>
 <li>for data processed by Google you can use Google's tools (<a href="https://myaccount.google.com/" rel="noopener">Google Account</a>,
   <a href="https://myadcenter.google.com/" rel="noopener">My Ad Center</a>) or <a href="https://support.google.com/policies/contact/general_privacy_form" rel="noopener">contact Google</a>;</li>
-<li>for anything else write to <strong>francescoscurti1@gmail.com</strong>: we reply within <strong>one month</strong> (extendable by two
+<li>for anything else write to <strong>stonekind.game@gmail.com</strong>: we reply within <strong>one month</strong> (extendable by two
   months for complex cases, as provided by Art. 12 GDPR).</li>
 </ul>
 <p>You also have the right to <strong>lodge a complaint with the Italian Data Protection Authority</strong>
@@ -533,7 +552,7 @@ a "sale" or "sharing" under the CCPA/CPRA and similar state laws.</p>
   state's law, the game shows a Google message allowing you to opt out of the sale or sharing of your
   data; you can change this choice under <strong>Settings → "Privacy &amp; ads"</strong>. You can also delete your
   advertising ID in Android settings.</li>
-<li><strong>Other rights</strong> (to know, access, delete, correct, limit): write to francescoscurti1@gmail.com. We will not
+<li><strong>Other rights</strong> (to know, access, delete, correct, limit): write to stonekind.game@gmail.com. We will not
   discriminate against you for exercising your rights. We may ask for reasonable information to
   verify the request; you may use an authorised agent.</li>
 <li><strong>Global Privacy Control</strong> signals apply to browsers; in an Android app the equivalent mechanism is
@@ -546,7 +565,7 @@ Families" programme. The developer does not knowingly collect children's data.</
 (Art. 8 GDPR); in Italy the age is <strong>14</strong> (Art. 2-quinquies Italian Privacy Code). If you are below
 the age of digital consent in your country, <strong>do not accept personalised ads</strong> in the consent form
 and ask a parent or guardian. If you are a parent and believe a child has sent us personal data,
-write to francescoscurti1@gmail.com and we will delete it.</p>
+write to stonekind.game@gmail.com and we will delete it.</p>
 <p>In the United States the game is not directed to children under 13 within the meaning of COPPA.</p>
 <h2>13. Security</h2>
 <p>Communications between Google's SDK and Google's servers are <strong>encrypted in transit</strong> (TLS). Saves
@@ -556,9 +575,9 @@ are kept in the app's private storage, which other apps cannot access.</p>
 be published at this address with a new date; for significant changes we will also mention it in
 the Google Play release notes and, if necessary, ask for your consent again.</p>
 <h2>15. Contact</h2>
-<p>BiteForge — francescoscurti1@gmail.com — Pescara, Italy</p>
+<p>BiteForge — stonekind.game@gmail.com — Pescara, Italy</p>
 </section>
 </main>
-<footer>Stonekind — BiteForge — <a href="mailto:francescoscurti1@gmail.com">francescoscurti1@gmail.com</a></footer>
+<footer>Stonekind — BiteForge — <a href="mailto:stonekind.game@gmail.com">stonekind.game@gmail.com</a></footer>
 </body>
 </html>

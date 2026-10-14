@@ -7,54 +7,73 @@
 <meta name="description" content="Informazioni legali, privacy, termini e crediti di Stonekind.">
 <meta name="color-scheme" content="light dark">
 <style>
-:root{--bg:#faf7f2;--surface:#ffffff;--text:#2b2620;--muted:#6b6259;--accent:#8a5a2b;--border:#e4dccf;--code:#f1ece3}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1c1915;--surface:#26221d;--text:#ece5da;--muted:#b3a899;--accent:#e0a868;--border:#3a342c;--code:#302a23}}
-:root[data-theme="dark"]{--bg:#1c1915;--surface:#26221d;--text:#ece5da;--muted:#b3a899;--accent:#e0a868;--border:#3a342c;--code:#302a23}
+:root{--bg:#f4f1ea;--surface:#fffdf9;--text:#262320;--muted:#6a6358;--accent:#2f6f56;--accent-2:#c27a1f;--border:#e2dccf;--code:#efeadf;--hero-a:#2b2a26;--hero-b:#3d4a3f;--shadow:0 1px 2px rgba(40,30,10,.06),0 8px 24px -12px rgba(40,30,10,.18)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#171612;--surface:#211f1a;--text:#ebe6dc;--muted:#aca493;--accent:#6fc29a;--accent-2:#e8b05a;--border:#38342b;--code:#2b2822;--hero-a:#1f1e1a;--hero-b:#2c3a31;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6)}}
+:root[data-theme="dark"]{--bg:#171612;--surface:#211f1a;--text:#ebe6dc;--muted:#aca493;--accent:#6fc29a;--accent-2:#e8b05a;--border:#38342b;--code:#2b2822;--hero-a:#1f1e1a;--hero-b:#2c3a31;--shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -12px rgba(0,0,0,.6)}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-header{background:var(--surface);border-bottom:1px solid var(--border)}
-.bar{max-width:820px;margin:0 auto;padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;justify-content:space-between}
-.brand{font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none;letter-spacing:.02em}
-nav{display:flex;flex-wrap:wrap;gap:6px 16px}
-nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
-nav a[aria-current="page"],nav a:hover{color:var(--accent)}
-main{max-width:820px;margin:0 auto;padding:16px 16px 48px}
-.lang{display:flex;gap:8px;margin:8px 0 24px}
-.lang a{border:1px solid var(--border);border-radius:999px;padding:4px 14px;color:var(--text);text-decoration:none;font-size:.9rem;background:var(--surface)}
-.lang a:hover{border-color:var(--accent)}
-section{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:8px 20px 20px;margin-bottom:28px}
-h1{font-size:1.6rem;line-height:1.25;margin:16px 0 8px}
-h2{font-size:1.2rem;margin:28px 0 8px;padding-top:8px;border-top:1px solid var(--border)}
-h3{font-size:1.05rem;margin:20px 0 6px}
-a{color:var(--accent);overflow-wrap:anywhere}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:10;background:linear-gradient(120deg,var(--hero-a),var(--hero-b));border-bottom:3px solid var(--accent-2);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.bar{max-width:860px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center;justify-content:space-between}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.2rem;color:#f6efe0;text-decoration:none;letter-spacing:.06em;text-transform:uppercase}
+.brand::before{content:"";width:22px;height:22px;background:var(--accent-2);clip-path:polygon(50% 0,100% 28%,86% 100%,14% 100%,0 28%);flex:none}
+nav{display:flex;flex-wrap:wrap;gap:4px 6px}
+nav a{color:#d8d0bf;text-decoration:none;font-size:.93rem;padding:5px 12px;border-radius:999px;transition:background .15s,color .15s}
+nav a:hover{background:rgba(255,255,255,.12);color:#fff}
+nav a[aria-current="page"]{background:var(--accent-2);color:#241a08;font-weight:600}
+main{max-width:860px;margin:0 auto;padding:20px 16px 56px}
+.lang{display:flex;gap:8px;margin:4px 0 22px}
+.lang a{border:1px solid var(--border);border-radius:999px;padding:5px 16px;color:var(--text);text-decoration:none;font-size:.9rem;background:var(--surface);transition:all .15s}
+.lang a:hover{border-color:var(--accent);color:var(--accent)}
+section{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:10px 28px 26px;margin-bottom:32px;box-shadow:var(--shadow)}
+h1{font-size:1.75rem;line-height:1.25;margin:20px 0 10px;letter-spacing:-.01em}
+h1::after{content:"";display:block;width:56px;height:4px;border-radius:2px;background:var(--accent-2);margin-top:10px}
+h2{font-size:1.2rem;margin:32px 0 10px;padding:10px 0 0;border-top:1px solid var(--border);color:var(--accent)}
+h3{font-size:1.04rem;margin:22px 0 6px}
+a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}
+a:hover{color:var(--accent-2)}
 p,li{overflow-wrap:break-word}
-.table-wrap{overflow-x:auto;margin:12px 0}
-table{border-collapse:collapse;width:100%;font-size:.93rem}
-th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
-th{background:var(--code)}
-blockquote{margin:12px 0;padding:4px 16px;border-left:3px solid var(--accent);color:var(--text);background:var(--code);border-radius:0 8px 8px 0}
+li{margin:3px 0}
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--border);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border-bottom:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{background:var(--code);font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--code) 45%,transparent)}
+blockquote{margin:14px 0;padding:6px 18px;border-left:4px solid var(--accent-2);background:var(--code);border-radius:0 10px 10px 0}
 code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88rem;background:var(--code);border-radius:6px}
-code{padding:1px 5px}
+code{padding:1px 6px}
 pre{padding:12px;overflow-x:auto;white-space:pre}
 pre code{padding:0;background:none}
 em{color:var(--muted)}
-footer{max-width:820px;margin:0 auto;padding:0 16px 32px;color:var(--muted);font-size:.85rem}
-@media (max-width:480px){body{font-size:15px}section{padding:4px 14px 16px}h1{font-size:1.35rem}}
+strong{font-weight:650}
+.hero{border-radius:16px;padding:30px 28px;margin:4px 0 26px;color:#f6efe0;background:linear-gradient(135deg,var(--hero-a),var(--hero-b));box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-40px;top:-40px;width:180px;height:180px;background:var(--accent-2);opacity:.15;clip-path:polygon(50% 0,100% 28%,86% 100%,14% 100%,0 28%)}
+.hero h1{margin:0 0 8px;font-size:1.9rem;color:#fff}
+.hero p{margin:0;max-width:60ch;color:#e3dccb}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:3px 12px;font-size:.85rem;color:#f6efe0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.card{display:block;padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--bg);color:var(--text);text-decoration:none;transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--text)}
+.card b{display:block;color:var(--accent);margin-bottom:2px}
+.card span{font-size:.9rem;color:var(--muted)}
+footer{max-width:860px;margin:0 auto;padding:0 16px 36px;color:var(--muted);font-size:.85rem;text-align:center}
+@media (max-width:520px){body{font-size:15px}section{padding:4px 16px 20px}h1{font-size:1.4rem}.hero{padding:22px 18px}.hero h1{font-size:1.5rem}}
 </style>
 </head>
 <body>
 <header><div class="bar"><a class="brand" href="index.html">Stonekind</a><nav><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Termini / Terms</a></nav></div></header>
 <main>
 <div class="lang"><a href="#it" hreflang="it">Italiano</a><a href="#en" hreflang="en">English</a></div>
+<div class="hero" lang="it"><h1>Stonekind — informazioni legali</h1>
+<p>Stonekind è un gioco gestionale di villaggio per Android: sei ere, dall'Età della Pietra all'Età dei Lumi.</p>
+<div class="chips"><span class="chip">Gratuito</span><span class="chip">Nessun account</span><span class="chip">Salvataggi solo sul tuo dispositivo</span><span class="chip">Solo annunci con premio facoltativi</span></div></div>
 <section id="it" lang="it">
-<h1>Stonekind — informazioni legali</h1>
-<p>Stonekind è un gioco gestionale di villaggio per Android: sei ere, dall'Età della Pietra all'Età dei Lumi. È gratuito, non richiede account, salva la partita solo sul tuo dispositivo e mostra solo annunci con premio facoltativi.</p>
+<div class="cards"><a class="card" href="privacy.html#it"><b>Informativa sulla privacy</b><span>Quali dati vengono trattati e i tuoi diritti</span></a><a class="card" href="terms.html#it"><b>Termini di servizio</b><span>Licenza d'uso (EULA) e condizioni</span></a><a class="card" href="#credits"><b>Crediti e licenze</b><span>Godot, font, SDK e altre terze parti</span></a></div>
 <ul>
-<li><a href="privacy.html#it">Informativa sulla privacy</a></li>
-<li><a href="terms.html#it">Termini di servizio e licenza d'uso</a></li>
 <li>Gestisci il consenso agli annunci nel gioco: <strong>Impostazioni → "Privacy e pubblicità"</strong></li>
-<li>Contatti: <a href="mailto:francescoscurti1@gmail.com">francescoscurti1@gmail.com</a></li>
+<li>Contatti: <a href="mailto:stonekind.game@gmail.com">stonekind.game@gmail.com</a></li>
 </ul>
 <h2 id="credits">Crediti e licenze</h2>
 <blockquote>
@@ -73,14 +92,14 @@ Stable Diffusion XL).</p>
 </blockquote>
 <p>I testi integrali delle licenze sono disponibili nel gioco (Impostazioni → Crediti e licenze) e sui siti dei progetti: <a href="https://godotengine.org/license/" rel="noopener">Godot Engine (MIT)</a>, <a href="https://openfontlicense.org" rel="noopener">SIL Open Font License 1.1</a>, <a href="https://github.com/godot-sdk-integrations/godot-admob" rel="noopener">plugin Godot AdMob (MIT)</a>.</p>
 </section>
+<div class="hero" lang="en"><h1>Stonekind — legal information</h1>
+<p>Stonekind is a village management game for Android: six eras, from the Stone Age to the Enlightenment.</p>
+<div class="chips"><span class="chip">Free</span><span class="chip">No account</span><span class="chip">Saves stay on your device</span><span class="chip">Only optional rewarded ads</span></div></div>
 <section id="en" lang="en">
-<h1>Stonekind — legal information</h1>
-<p>Stonekind is a village management game for Android: six eras, from the Stone Age to the Enlightenment. It is free, requires no account, saves your game only on your device and shows only optional rewarded ads.</p>
+<div class="cards"><a class="card" href="privacy.html#en"><b>Privacy Policy</b><span>What data is processed and your rights</span></a><a class="card" href="terms.html#en"><b>Terms of Service</b><span>EULA and conditions of use</span></a><a class="card" href="#credits-en"><b>Credits and licences</b><span>Godot, fonts, SDKs and other third parties</span></a></div>
 <ul>
-<li><a href="privacy.html#en">Privacy Policy</a></li>
-<li><a href="terms.html#en">Terms of Service and EULA</a></li>
 <li>Manage ad consent in the game: <strong>Settings → "Privacy &amp; ads"</strong></li>
-<li>Contact: <a href="mailto:francescoscurti1@gmail.com">francescoscurti1@gmail.com</a></li>
+<li>Contact: <a href="mailto:stonekind.game@gmail.com">stonekind.game@gmail.com</a></li>
 </ul>
 <h2 id="credits-en">Credits and licences</h2>
 <blockquote>
@@ -100,6 +119,6 @@ Diffusion XL).</p>
 <p>Full licence texts are available in the game (Settings → Credits &amp; licences) and on the projects' websites: <a href="https://godotengine.org/license/" rel="noopener">Godot Engine (MIT)</a>, <a href="https://openfontlicense.org" rel="noopener">SIL Open Font License 1.1</a>, <a href="https://github.com/godot-sdk-integrations/godot-admob" rel="noopener">Godot AdMob plugin (MIT)</a>.</p>
 </section>
 </main>
-<footer>Stonekind — BiteForge — <a href="mailto:francescoscurti1@gmail.com">francescoscurti1@gmail.com</a></footer>
+<footer>Stonekind — BiteForge — <a href="mailto:stonekind.game@gmail.com">stonekind.game@gmail.com</a></footer>
 </body>
 </html>
